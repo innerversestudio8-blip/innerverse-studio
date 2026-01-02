@@ -14,13 +14,13 @@ export default function AboutPage() {
             It’s a Position You Learn to Stand In.
           </h1>
 
-          <p className="text-xl text-[#3F4F4B] mb-8">
+          <p className="text-xl text-[#3F4F4B] mb-8 text-justify leading-relaxed">
             Innerverse Studio exists for leaders who carry responsibility quietly —
             professionally, personally, and socially — and feel the weight of decisions
             more than they speak about it.
           </p>
 
-          <p className="text-lg text-[#4A5A55]">
+          <p className="text-xl text-[#3F4F4B] mb-8 text-justify leading-relaxed">
             This work is about restoring inner authority,
             not adding more strategies, frameworks, or noise.
           </p>
@@ -35,19 +35,19 @@ export default function AboutPage() {
             The Philosophy Behind Innerverse
           </h2>
 
-          <p className="text-lg text-[#4A5A55] mb-6">
+          <p className="text-xl text-[#3F4F4B] mb-8 text-justify leading-relaxed">
             Most leaders don’t struggle because they lack intelligence,
             ambition, or discipline.
           </p>
 
-          <p className="text-lg text-[#4A5A55] mb-6">
+          <p className="text-xl text-[#3F4F4B] mb-8 text-justify leading-relaxed">
             They struggle because responsibility grows faster than
             their internal decision framework.
             As roles expand, expectations multiply, and visibility increases,
             the mind begins carrying more than it was designed to hold alone.
           </p>
 
-          <p className="text-lg text-[#4A5A55]">
+          <p className="text-xl text-[#3F4F4B] mb-8 text-justify leading-relaxed">
             Innerverse Studio focuses on recalibrating the *inner position*
             from which decisions are made — so clarity becomes stable,
             not situational.
@@ -86,19 +86,19 @@ export default function AboutPage() {
               About the Founder & Coach
             </h2>
 
-            <p className="text-lg text-[#4A5A55] mb-6">
+            <p className="text-xl text-[#3F4F4B] mb-8 text-justify leading-relaxed">
               I work with founders, CXOs, and senior professionals who are
               outwardly successful yet internally carrying unresolved decision
               weight, responsibility pressure, and quiet isolation.
             </p>
 
-            <p className="text-lg text-[#4A5A55] mb-6">
+            <p className="text-xl text-[#3F4F4B] mb-8 text-justify leading-relaxed">
               This work comes from years of observing how intelligent,
               capable leaders slowly lose clarity — not due to failure,
               but due to prolonged responsibility without recalibration.
             </p>
 
-            <p className="text-lg text-[#4A5A55]">
+            <p className="text-xl text-[#3F4F4B] mb-8 text-justify leading-relaxed">
               My role is not to advise your life,
               but to help you restore a grounded internal position
               from which decisions feel clean, confident, and aligned.
@@ -154,7 +154,7 @@ export default function AboutPage() {
           Clarity Changes How Everything Moves.
         </h2>
 
-        <p className="text-lg text-[#4A5A55] mb-10 max-w-2xl mx-auto">
+        <p className="text-xl text-[#3F4F4B] mb-8 text-justify leading-relaxed">
           When decisions feel clean, leadership feels calm.
           And when leadership feels calm, impact follows naturally.
         </p>
