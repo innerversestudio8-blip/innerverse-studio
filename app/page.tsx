@@ -1,216 +1,205 @@
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="w-full bg-[#F9FAF9]">
+    <main className="w-full bg-[#F9FAF9] text-[#1F3D2B]">
 
       {/* ================= HERO ================= */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="max-w-7xl mx-auto px-6 md:px-16 py-32 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div>
+          <p className="uppercase tracking-widest text-sm text-[#6B7F6A] mb-6">
+            Innerverse Studio
+          </p>
 
-          {/* LEFT: TEXT */}
-          <div>
-            <p className="uppercase tracking-widest text-sm text-[#6B7F6A] mb-4">
-              Innerverse Studio
-            </p>
+          <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-8">
+            Clarity for Leaders  
+            <br />Who Carry Real Responsibility
+          </h1>
 
-            <h1 className="text-5xl md:text-6xl font-semibold text-[#1F3D2B] leading-tight mb-6">
-              Clarity for Leaders <br /> Who Carry Real Responsibility
-            </h1>
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
+            Even when everything appears under control, the weight of decisions
+            never truly leaves your mind. Clarity slips first — quietly —
+            while expectations continue to rise.
+          </p>
 
-            <h2 className="text-xl text-[#3F4F4B] mb-6">
-              Faster Decisions. Stronger Authority. Elevated Impact —
-              Professionally & Personally.
-            </h2>
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-10 text-justify">
+            Innerverse Studio restores the internal position from which
+            decisions feel effortless, confident, and aligned —
+            at work, at home, and in your broader sphere.
+          </p>
 
-            <p className="text-lg text-[#4A5A55] mb-6">
-              You’re capable, experienced, and trusted — yet decisions feel heavier,
-              overthinking lingers, and clarity is fleeting.
-            </p>
+          <a
+            href="/contact"
+            className="inline-block px-12 py-4 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
+          >
+            Apply for a Private Conversation
+          </a>
 
-            <p className="text-lg text-[#4A5A55] mb-8">
-              Innerverse Studio helps founders, CXOs, and senior leaders restore
-              mental clarity, confidence, and decision authority — so they can
-              lead with calm, make bold moves, strengthen relationships, and unlock
-              higher influence at work and in life.
-            </p>
+          <p className="text-sm text-[#6B7F6A] mt-4">
+            Confidential. Selective. By design.
+          </p>
+        </div>
 
-            <p className="text-lg font-medium text-[#1F3D2B] mb-10">
-              Think sharper. Feel stronger. Lead better — at work, at home, and in society.
-            </p>
+        {/* HERO VISUAL */}
+        <img
+          src="/illustrations/hero.png"
+          alt="Leadership clarity illustration"
+          className="w-full max-w-md mx-auto"
+        />
+      </section>
 
-            <div className="flex items-center gap-6">
-              <a
-                href="/contact"
-                className="px-10 py-4 rounded-full bg-[#E8C547] text-[#1F3D2B] font-medium shadow-lg hover:scale-105 transition"
-              >
-                Book Your Private Clarity Session
-              </a>
+      {/* ================= PROBLEM STATEMENT ================= */}
+      <section className="bg-[#F4F7F3] py-28 px-6 md:px-16 text-center">
+        <p className="max-w-4xl mx-auto text-3xl md:text-4xl font-medium leading-snug">
+          When responsibility grows faster than clarity,  
+          decisions become heavier — even for capable leaders.
+        </p>
+      </section>
 
-              <span className="text-sm text-[#6B7F6A]">
-                Confidential. Selective. By design.
-              </span>
+      {/* ================= WHAT INNERVERSE DOES ================= */}
+      <section className="max-w-7xl mx-auto px-6 md:px-16 py-32 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div>
+          <h2 className="text-4xl font-semibold mb-8">
+            What Innerverse Studio Does
+          </h2>
+
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
+            Innerverse is not about motivation, productivity hacks,
+            or surface-level mindset work.
+          </p>
+
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
+            This work recalibrates the internal position from which
+            decisions are made — so clarity becomes stable,
+            reliable, and inherent.
+          </p>
+
+          <p className="text-xl text-[#3F4F4B] leading-relaxed text-justify">
+            Leaders who operate from this position
+            think more clearly, decide faster,
+            and lead with calm authority — without force.
+          </p>
+        </div>
+
+        {/* SUPPORTING VISUAL */}
+        <img
+          src="/illustrations/transformation.png"
+          alt="Decision position illustration"
+          className="w-full max-w-md mx-auto"
+        />
+      </section>
+
+      {/* ================= IMPACT METRICS ================= */}
+      <section className="max-w-7xl mx-auto px-6 md:px-16 py-28">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
+
+          {[
+            { value: "120+", label: "Leaders recalibrated" },
+            { value: "12+ hrs/week", label: "Mental bandwidth reclaimed" },
+            { value: "3× faster", label: "High-stakes decisions" },
+            { value: "48 hrs", label: "Team alignment post recalibration" },
+          ].map((item) => (
+            <div
+              key={item.label}
+              className="bg-white rounded-3xl p-10 shadow-md"
+            >
+              <p className="text-4xl font-semibold mb-3">{item.value}</p>
+              <p className="text-[#4A5A55]">{item.label}</p>
             </div>
-          </div>
-
-          {/* RIGHT: IMAGE */}
-          <div className="flex justify-center">
-            <img
-              src="/illustrations/hero.png"
-              alt="Leadership clarity"
-              className="w-[420px]"
-            />
-          </div>
+          ))}
 
         </div>
       </section>
 
-      {/* ================= DECISION LOAD ================= */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 py-28 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-
-        {/* TEXT + CARDS */}
-        <div>
-          <h2 className="text-4xl font-semibold text-[#1F3D2B] mb-6">
-            The Real Problem Isn’t Skill — It’s Decision Load
+      {/* ================= SERVICES PREVIEW ================= */}
+      <section className="bg-[#1F3D2B] py-32 px-6 md:px-16 text-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-8">
+            How Leaders Work With Innerverse
           </h2>
 
-          <p className="text-lg text-[#4A5A55] mb-10">
-            You’re not struggling because you lack competence.
-            You’re struggling because your responsibility — professional and
-            personal — has outgrown your decision framework.
+          <p className="text-xl text-white/90 leading-relaxed mb-8 text-justify">
+            Innerverse offers private, high-trust engagements
+            for leaders whose decisions shape people,
+            organizations, and long-term outcomes.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <p className="text-xl text-white/90 leading-relaxed mb-10 text-justify">
+            This work is selective, discreet, and designed
+            for those ready to operate from clarity,
+            not pressure.
+          </p>
+
+          <a
+            href="/services"
+            className="inline-block px-12 py-4 rounded-full bg-white text-[#1F3D2B] shadow-lg hover:scale-105 transition"
+          >
+            Explore 1:1 Recalibration
+          </a>
+        </div>
+      </section>
+
+      {/* ================= TESTIMONIAL CARDS ================= */}
+      <section className="bg-[#F4F7F3] py-32 px-6 md:px-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-16">
+            What Leaders Experience
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
             {[
-              "Slow decisions → missed business opportunities, delayed growth, lost revenue",
-              "Unclear thinking → weaker influence, second-guessing, stalled promotions",
-              "Mental overload → stress, burnout, strained personal relationships",
-              "Carrying everything alone → reduced team confidence and social isolation",
-            ].map((item) => (
+              {
+                quote:
+                  "After working with Innerverse, I made decisions in minutes that previously took days. My team executed seamlessly.",
+                author: "CXO",
+                industry: "SaaS Unicorn",
+              },
+              {
+                quote:
+                  "The clarity I gained improved both my personal and professional life. Meetings were shorter and I felt calm under pressure.",
+                author: "Founder",
+                industry: "Fintech Startup",
+              },
+              {
+                quote:
+                  "Two weeks of recalibration gave me a clear lens. Decisions impacting ~$3M were made with confidence and precision.",
+                author: "Director",
+                industry: "Manufacturing",
+              },
+            ].map((item, idx) => (
               <div
-                key={item}
-                className="
-                  rounded-2xl p-6
-                  bg-gradient-to-br from-[#FFFFFF] to-[#F1F6F3]
-                  border-l-4 border-[#E8C547]
-                  shadow-md
-                  hover:shadow-xl hover:-translate-y-1
-                  transition-all duration-300
-                "
+                key={idx}
+                className="bg-white rounded-3xl p-8 shadow-md"
               >
-                <p className="text-[#3F4F4B]">{item}</p>
+                <p className="text-lg text-[#3F4F4B] leading-relaxed mb-6">
+                  “{item.quote}”
+                </p>
+                <div className="text-sm text-[#6B7F6A]">
+                  — {item.author}, {item.industry}
+                </div>
               </div>
             ))}
+
           </div>
-
-          <p className="text-lg text-[#4A5A55] mt-8">
-            Externally, you perform well.
-            <br />
-            Internally, your career, relationships, status, and influence remain capped —
-            until clarity returns.
-          </p>
-        </div>
-
-        {/* IMAGE */}
-        <div className="flex justify-center">
-          <img
-            src="/illustrations/decision.png"
-            alt="Decision load illustration"
-            className="w-[380px]"
-          />
-        </div>
-      </section>
-
-      {/* ================= TRANSFORMATION ================= */}
-      <section className="bg-gradient-to-r from-[#F3E8E2] to-[#E8F3EF]">
-        <div className="max-w-7xl mx-auto px-6 md:px-16 py-28">
-
-          <div className="flex justify-center mb-14">
-            <img
-              src="/illustrations/transformation.png"
-              alt="Leadership transformation"
-              className="w-[680px]"
-            />
-          </div>
-
-          <h2 className="text-4xl font-semibold text-[#1F3D2B] mb-12 text-center">
-            The Shift: From Mental Load to Clear Authority
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Before</h3>
-              <ul className="space-y-3 text-[#4A5A55]">
-                <li>• Overthinking and delayed decisions</li>
-                <li>• Mental fatigue and stress</li>
-                <li>• Reduced confidence and presence</li>
-                <li>• Responsibility without clarity</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">After</h3>
-              <ul className="space-y-3 text-[#4A5A55]">
-                <li>• Faster, cleaner decisions</li>
-                <li>• Calm authority under pressure</li>
-                <li>• Strong leadership presence</li>
-                <li>• Career and life acceleration</li>
-              </ul>
-            </div>
-          </div>
-
-          <blockquote className="mt-16 text-xl italic text-center text-[#1F3D2B] max-w-4xl mx-auto">
-            “I know exactly what to do — at work, with my team, and in life.
-            My influence, relationships, and status have all improved.”
-          </blockquote>
-        </div>
-      </section>
-
-      {/* ================= ABOUT COACH PREVIEW ================= */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 py-28 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-
-        <img
-          src="/illustrations/coach.jpeg"
-          alt="Founder & Coach"
-          className="w-full max-w-md rounded-3xl shadow-xl mx-auto"
-        />
-
-        <div>
-          <h2 className="text-4xl font-semibold text-[#1F3D2B] mb-6">
-            About the Coach
-          </h2>
-
-          <p className="text-lg text-[#4A5A55] mb-6">
-            I work with leaders who carry real responsibility — founders,
-            CXOs, and senior professionals navigating complexity, pressure,
-            and high-stakes decisions.
-          </p>
-
-          <p className="text-lg text-[#4A5A55]">
-            This work is private, selective, and designed for those ready
-            to lead with clarity, calm authority, and real impact.
-          </p>
         </div>
       </section>
 
       {/* ================= FINAL CTA ================= */}
-      <section className="text-center py-28">
-        <h2 className="text-4xl font-semibold text-[#1F3D2B] mb-6">
-          Apply for a Private Clarity Session
+      <section className="text-center py-28 px-6 md:px-16">
+        <h2 className="text-4xl font-semibold mb-6">
+          Clarity Changes How Everything Moves
         </h2>
 
-        <p className="text-lg text-[#4A5A55] mb-10">
-          Not a sales call. A confidential conversation to assess fit.
+        <p className="text-xl text-[#3F4F4B] max-w-3xl mx-auto mb-10">
+          When decisions feel clean, leadership feels calm.
+          And when leadership feels calm, impact follows naturally.
         </p>
 
         <a
           href="/contact"
-          className="inline-block px-12 py-4 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
+          className="inline-block px-14 py-4 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
         >
-          Apply Now
+          Apply for a Private Conversation
         </a>
-
-        <p className="text-sm text-[#6B7F6A] mt-4">
-          Discreet. Confidential. Limited availability.
-        </p>
       </section>
 
     </main>
