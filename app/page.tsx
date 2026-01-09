@@ -2,25 +2,27 @@ export default function HomePage() {
   return (
     <main className="w-full bg-[#F9FAF9] text-[#1F3D2B]">
 
-      {/* ================= HERO ================= */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 py-32 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+      {/* ================= HERO (REFINED) ================= */}
+      <section className="max-w-7xl mx-auto px-6 md:px-16 pt-24 pb-16 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+        {/* LEFT */}
         <div>
-          <p className="uppercase tracking-widest text-sm text-[#6B7F6A] mb-6">
+          <p className="uppercase tracking-widest text-sm text-[#6B7F6A] mb-4">
             Innerverse Studio
           </p>
 
-          <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-8">
+          <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-6">
             Clarity for Leaders  
-            <br />Who Carry Real Responsibility
+            Who Carry Real Responsibility
           </h1>
 
-          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-6 text-justify">
             Even when everything appears under control, the weight of decisions
             never truly leaves your mind. Clarity slips first — quietly —
             while expectations continue to rise.
           </p>
 
-          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-10 text-justify">
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
             Innerverse Studio restores the internal position from which
             decisions feel effortless, confident, and aligned —
             at work, at home, and in your broader sphere.
@@ -33,12 +35,12 @@ export default function HomePage() {
             Apply for a Private Conversation
           </a>
 
-          <p className="text-sm text-[#6B7F6A] mt-4">
+          <p className="text-sm text-[#6B7F6A] mt-3">
             Confidential. Selective. By design.
           </p>
         </div>
 
-        {/* HERO VISUAL */}
+        {/* RIGHT VISUAL */}
         <img
           src="/illustrations/hero.png"
           alt="Leadership clarity illustration"
@@ -47,7 +49,7 @@ export default function HomePage() {
       </section>
 
       {/* ================= PROBLEM STATEMENT ================= */}
-      <section className="bg-[#F4F7F3] py-28 px-6 md:px-16 text-center">
+      <section className="bg-[#F4F7F3] py-20 px-6 md:px-16 text-center">
         <p className="max-w-4xl mx-auto text-3xl md:text-4xl font-medium leading-snug">
           When responsibility grows faster than clarity,  
           decisions become heavier — even for capable leaders.
@@ -55,18 +57,19 @@ export default function HomePage() {
       </section>
 
       {/* ================= WHAT INNERVERSE DOES ================= */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 py-32 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+      <section className="max-w-7xl mx-auto px-6 md:px-16 py-28 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+
         <div>
-          <h2 className="text-4xl font-semibold mb-8">
+          <h2 className="text-4xl font-semibold mb-6">
             What Innerverse Studio Does
           </h2>
 
-          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-6 text-justify">
             Innerverse is not about motivation, productivity hacks,
             or surface-level mindset work.
           </p>
 
-          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-6 text-justify">
             This work recalibrates the internal position from which
             decisions are made — so clarity becomes stable,
             reliable, and inherent.
@@ -79,16 +82,15 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* SUPPORTING VISUAL */}
         <img
           src="/illustrations/transformation.png"
-          alt="Decision position illustration"
+          alt="Decision clarity illustration"
           className="w-full max-w-md mx-auto"
         />
       </section>
 
       {/* ================= IMPACT METRICS ================= */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 py-28">
+      <section className="max-w-7xl mx-auto px-6 md:px-16 py-24">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
 
           {[
@@ -101,7 +103,7 @@ export default function HomePage() {
               key={item.label}
               className="bg-white rounded-3xl p-10 shadow-md"
             >
-              <p className="text-4xl font-semibold mb-3">{item.value}</p>
+              <p className="text-4xl font-semibold mb-2">{item.value}</p>
               <p className="text-[#4A5A55]">{item.label}</p>
             </div>
           ))}
@@ -110,19 +112,19 @@ export default function HomePage() {
       </section>
 
       {/* ================= SERVICES PREVIEW ================= */}
-      <section className="bg-[#1F3D2B] py-32 px-6 md:px-16 text-white">
+      <section className="bg-[#1F3D2B] py-28 px-6 md:px-16 text-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-semibold mb-8">
+          <h2 className="text-4xl font-semibold mb-6">
             How Leaders Work With Innerverse
           </h2>
 
-          <p className="text-xl text-white/90 leading-relaxed mb-8 text-justify">
+          <p className="text-xl text-white/90 leading-relaxed mb-6 text-justify">
             Innerverse offers private, high-trust engagements
             for leaders whose decisions shape people,
             organizations, and long-term outcomes.
           </p>
 
-          <p className="text-xl text-white/90 leading-relaxed mb-10 text-justify">
+          <p className="text-xl text-white/90 leading-relaxed mb-8 text-justify">
             This work is selective, discreet, and designed
             for those ready to operate from clarity,
             not pressure.
@@ -137,15 +139,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= TESTIMONIAL CARDS ================= */}
-      <section className="bg-[#F4F7F3] py-32 px-6 md:px-16">
+      {/* ================= TESTIMONIALS ================= */}
+      <section className="bg-[#F4F7F3] py-28 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-semibold mb-16">
+          <h2 className="text-4xl font-semibold mb-14">
             What Leaders Experience
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-
             {[
               {
                 quote:
@@ -178,18 +179,17 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
-
           </div>
         </div>
       </section>
 
       {/* ================= FINAL CTA ================= */}
-      <section className="text-center py-28 px-6 md:px-16">
+      <section className="text-center py-24 px-6 md:px-16">
         <h2 className="text-4xl font-semibold mb-6">
           Clarity Changes How Everything Moves
         </h2>
 
-        <p className="text-xl text-[#3F4F4B] max-w-3xl mx-auto mb-10">
+        <p className="text-xl text-[#3F4F4B] max-w-3xl mx-auto mb-8">
           When decisions feel clean, leadership feels calm.
           And when leadership feels calm, impact follows naturally.
         </p>

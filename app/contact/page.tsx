@@ -1,13 +1,9 @@
 "use client";
 
-import { useState } from "react";
-
 export default function ContactPage() {
-  const [submitting, setSubmitting] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitting(true);
 
     const form = e.currentTarget;
 
@@ -16,7 +12,6 @@ export default function ContactPage() {
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       role: (form.elements.namedItem("role") as HTMLInputElement).value,
       interest: (form.elements.namedItem("interest") as HTMLSelectElement).value,
-      timeline: (form.elements.namedItem("timeline") as HTMLSelectElement).value,
       seeking: (form.elements.namedItem("seeking") as HTMLTextAreaElement).value,
       expectation: (form.elements.namedItem("expectation") as HTMLTextAreaElement).value,
     };
@@ -26,19 +21,14 @@ export default function ContactPage() {
         "https://script.google.com/macros/s/AKfycbwcmCsOFIVmq6jbEq_s4iaYfjK6hOu9vhxrKC9IlQ6S2fVeKBbn0e19xHji0XrsTNP_/exec",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
           body: JSON.stringify(formData),
         }
       );
 
       alert("Your application has been submitted successfully.");
       form.reset();
-    } catch (error) {
+    } catch {
       alert("Something went wrong. Please try again.");
-    } finally {
-      setSubmitting(false);
     }
   }
 
@@ -46,77 +36,84 @@ export default function ContactPage() {
     <main className="w-full bg-[#F9FAF9] text-[#1F3D2B]">
 
       {/* ================= HERO ================= */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 py-28">
-        <h1 className="text-5xl font-semibold mb-6">
-          Apply for a Private Clarity Conversation
-        </h1>
+      <section className="max-w-7xl mx-auto px-6 md:px-16 pt-24 pb-16">
+        <div className="max-w-3xl">
+          <p className="uppercase tracking-widest text-sm text-[#6B7F6A] mb-4">
+            Private Conversation
+          </p>
 
-        <p className="text-xl text-[#4A5A55] max-w-3xl leading-relaxed">
-          This is a confidential application designed for leaders carrying
-          real responsibility. Please answer thoughtfully.
-        </p>
+          <h1 className="text-5xl font-semibold leading-tight mb-6">
+            Apply for a Private  
+            Clarity Conversation
+          </h1>
 
-        <p className="text-sm text-[#6B7F6A] max-w-2xl mt-4">
-          This is not a sales call. Not every application is accepted.
-          If there’s alignment, you’ll be contacted personally.
-        </p>
+          <p className="text-xl text-[#3F4F4B] leading-relaxed text-justify">
+            This is not a sales call.
+            It is a confidential, one-to-one conversation to assess
+            alignment with your level of responsibility and readiness
+            for deeper clarity, calm authority, and decisive leadership.
+          </p>
+        </div>
+      </section>
+
+      {/* ================= CONTEXT ================= */}
+      <section className="max-w-6xl mx-auto px-6 md:px-16 pb-16">
+        <div className="bg-white rounded-3xl p-8 shadow-md">
+          <p className="text-lg text-[#4A5A55] leading-relaxed text-justify">
+            Innerverse Studio works selectively with leaders who carry
+            real responsibility — professionally, personally, and socially.
+            Applications are reviewed personally.
+          </p>
+
+          <p className="text-lg text-[#4A5A55] leading-relaxed mt-4 text-justify">
+            If this conversation is not the right fit,
+            you will know clearly and respectfully.
+            There is no pressure to proceed.
+          </p>
+        </div>
       </section>
 
       {/* ================= FORM ================= */}
       <section className="max-w-5xl mx-auto px-6 md:px-16 pb-32">
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-3xl p-12 shadow-md space-y-8"
+          className="bg-white rounded-3xl p-10 shadow-md space-y-8"
         >
 
-          {/* Name */}
-          <input
-            name="name"
-            required
-            placeholder="Full Name"
-            className="w-full rounded-xl border px-4 py-3"
-          />
+          {/* BASIC INFO */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input
+              name="name"
+              required
+              placeholder="Full Name"
+              className="w-full rounded-xl border px-4 py-3"
+            />
 
-          {/* Email */}
-          <input
-            name="email"
-            type="email"
-            required
-            placeholder="Email Address"
-            className="w-full rounded-xl border px-4 py-3"
-          />
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Email Address"
+              className="w-full rounded-xl border px-4 py-3"
+            />
+          </div>
 
-          {/* Role */}
           <input
             name="role"
             placeholder="Current Role / Responsibility"
             className="w-full rounded-xl border px-4 py-3"
           />
 
-          {/* Interest */}
           <select
             name="interest"
             className="w-full rounded-xl border px-4 py-3"
           >
-            <option value="">What are you interested in?</option>
-            <option>Private 1:1 Clarity Sessions</option>
-            <option>Longer-Term Engagement</option>
-            <option>Retreat Participation</option>
+            <option>Private 1:1 Clarity Conversation</option>
+            <option>Longer-Term Leadership Recalibration</option>
+            <option>Innerverse Retreat Participation</option>
             <option>Not sure yet</option>
           </select>
 
-          {/* Timeline */}
-          <select
-            name="timeline"
-            className="w-full rounded-xl border px-4 py-3"
-          >
-            <option value="">When are you looking to begin?</option>
-            <option>Immediately</option>
-            <option>Within the next 30 days</option>
-            <option>Exploring, not urgent</option>
-          </select>
-
-          {/* Seeking */}
           <textarea
             name="seeking"
             rows={5}
@@ -124,7 +121,6 @@ export default function ContactPage() {
             className="w-full rounded-xl border px-4 py-3"
           />
 
-          {/* Expectation */}
           <textarea
             name="expectation"
             rows={4}
@@ -132,23 +128,14 @@ export default function ContactPage() {
             className="w-full rounded-xl border px-4 py-3"
           />
 
-          {/* Submit */}
           <button
             type="submit"
-            disabled={submitting}
-            className={`px-14 py-4 rounded-full text-white shadow-lg transition
-              ${
-                submitting
-                  ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-[#1F3D2B] hover:scale-105"
-              }
-            `}
+            className="px-14 py-4 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
           >
-            {submitting ? "Submitting…" : "Submit Application"}
+            Submit Application
           </button>
 
-          {/* Privacy */}
-          <p className="text-xs text-[#6B7F6A] pt-2">
+          <p className="text-sm text-[#6B7F6A] mt-2">
             Your information is kept private and reviewed personally.
           </p>
 

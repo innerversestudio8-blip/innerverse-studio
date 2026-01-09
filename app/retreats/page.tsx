@@ -3,212 +3,186 @@ export default function RetreatsPage() {
     <main className="w-full bg-[#F9FAF9] text-[#1F3D2B]">
 
       {/* ================= HERO ================= */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 py-32 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-        <div>
-          <p className="uppercase tracking-widest text-sm text-[#6B7F6A] mb-6">
+      <section className="max-w-7xl mx-auto px-6 md:px-16 py-24">
+        <div className="max-w-4xl">
+          <p className="uppercase tracking-widest text-sm text-[#6B7F6A] mb-4">
             Innerverse Retreats
           </p>
 
           <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-8">
-            Step Away.  
-            <br />Think Clearly.  
-            <br />Lead With Authority.
+            Step Away. Think Clearly.  
+            Lead With Authority — at Work and Beyond.
           </h1>
 
-          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
-            Innerverse Retreats are invitation-only experiences for leaders
-            ready to reset their mind, reconnect with identity, and return
-            with unshakable clarity, calm authority, and renewed influence.
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-6 text-justify">
+            Invitation-only retreats for leaders ready to reset their mind,
+            reconnect with identity, and return with unshakable clarity,
+            calm authority, and renewed influence.
           </p>
 
-          <p className="text-xl text-[#3F4F4B] leading-relaxed text-justify">
+          <p className="text-lg text-[#4A5A55]">
             Limited seats. Private environments. Deep work.
           </p>
         </div>
-
-        {/* HERO VISUAL */}
-        <img
-          src="/illustrations/leadership-clarity.png"
-          alt="Leadership retreat clarity illustration"
-          className="w-full max-w-md mx-auto"
-        />
       </section>
 
       {/* ================= WHY RETREATS ================= */}
-      <section className="bg-[#F4F7F3] py-32 px-6 md:px-16">
-        <div className="max-w-5xl mx-auto">
+      <section className="bg-[#F4F7F3] py-28 px-6 md:px-16">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-semibold mb-10">
             Why Leaders Need Retreats
           </h2>
 
-          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
-            When responsibility is constant, clarity erodes quietly —
-            not because you are incapable, but because the mind never
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-6 text-justify">
+            When responsibility is constant, clarity erodes quietly.
+            Not because you’re incapable — but because the mind never
             gets the space required for deep recalibration.
           </p>
 
-          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
-            Innerverse Retreats create separation from operational demands,
-            social expectations, and reactive thinking.
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-6 text-justify">
+            Innerverse Retreats create separation from:
           </p>
 
+          <ul className="space-y-3 text-lg text-[#4A5A55] mb-8">
+            <li>• Operational demands</li>
+            <li>• Social expectations</li>
+            <li>• Reactive thinking loops</li>
+          </ul>
+
           <p className="text-xl text-[#3F4F4B] leading-relaxed text-justify">
-            Leaders don’t need more input.
-            They need space to listen inward again.
+            This separation allows insight, perspective,
+            and authority to re-emerge naturally.
+            Leaders don’t need more input —
+            they need space to listen inward again.
           </p>
         </div>
+      </section>
+
+      {/* ================= TRANSFORMATION VIGNETTE ================= */}
+      <section className="py-24 px-6 md:px-16">
+        <div className="max-w-5xl mx-auto bg-white rounded-3xl p-10 shadow-md">
+          <h3 className="text-2xl font-semibold mb-4">
+            Transformation Vignette
+          </h3>
+
+          <p className="text-[#3F4F4B] leading-relaxed mb-4">
+            <strong>Before:</strong> Operational, strategic,
+            and personal pressures created constant mental fatigue.
+          </p>
+
+          <p className="text-[#3F4F4B] leading-relaxed">
+            <strong>After:</strong> Decision-making clarity improved 2–3×.
+            Stress reduced by ~70%. Presence became calm and authoritative —
+            at work, home, and social life.
+          </p>
+        </div>
+      </section>
+
+      {/* ================= WHO THIS IS FOR ================= */}
+      <section className="max-w-7xl mx-auto px-6 md:px-16 py-28 grid grid-cols-1 md:grid-cols-2 gap-16">
+
+        <div>
+          <h2 className="text-4xl font-semibold mb-6">
+            This Retreat Is For Leaders Who Want
+          </h2>
+
+          <ul className="space-y-4 text-xl text-[#3F4F4B]">
+            <li>• Mental reset and reduction in decision fatigue (~70%)</li>
+            <li>• Decisions made 2–3× faster in high-stakes situations</li>
+            <li>• Calm authority that naturally commands respect</li>
+            <li>• Strategic priorities clarified across work and life</li>
+            <li>• Privacy, depth, and space to recalibrate identity</li>
+          </ul>
+        </div>
+
+        <div className="bg-white rounded-3xl p-10 shadow-md">
+          <h3 className="text-2xl font-semibold mb-4">
+            This Retreat Is Not
+          </h3>
+
+          <ul className="space-y-3 text-[#4A5A55]">
+            <li>• Quick-fix or surface-level experiences</li>
+            <li>• High-energy or performative environments</li>
+            <li>• Group tourism disguised as growth</li>
+            <li>• Leaders avoiding responsibility</li>
+          </ul>
+        </div>
+
       </section>
 
       {/* ================= WHAT HAPPENS ================= */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 py-32">
-        <h2 className="text-4xl font-semibold mb-16">
-          What Happens During an Innerverse Retreat
-        </h2>
-
-        <div className="space-y-16 max-w-4xl">
-
-          <div className="border-l-4 border-[#E8C547] pl-8">
-            <h3 className="text-2xl font-semibold mb-3">Mental Reset</h3>
-            <p className="text-lg text-[#3F4F4B]">
-              Structured space to decompress, slow thinking,
-              and release accumulated decision fatigue.
-            </p>
-          </div>
-
-          <div className="border-l-4 border-[#E8C547] pl-8">
-            <h3 className="text-2xl font-semibold mb-3">Identity Reconnection</h3>
-            <p className="text-lg text-[#3F4F4B]">
-              Revisit who you are beneath roles, expectations,
-              and performance pressure.
-            </p>
-          </div>
-
-          <div className="border-l-4 border-[#E8C547] pl-8">
-            <h3 className="text-2xl font-semibold mb-3">Strategic Realignment</h3>
-            <p className="text-lg text-[#3F4F4B]">
-              Clarify priorities across leadership,
-              relationships, and personal life.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= WHO IT IS FOR ================= */}
-      <section className="bg-[#1F3D2B] py-32 px-6 md:px-16 text-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
-
-          <div>
-            <h2 className="text-4xl font-semibold mb-8">
-              This Retreat Is For You If
-            </h2>
-
-            <ul className="space-y-5 text-lg text-white/90">
-              <li>• You carry high responsibility silently</li>
-              <li>• You want clarity without escape or distraction</li>
-              <li>• You value depth, privacy, and discretion</li>
-              <li>• You are ready for internal recalibration</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-4xl font-semibold mb-8">
-              This Retreat Is Not For
-            </h2>
-
-            <ul className="space-y-5 text-lg text-white/90">
-              <li>• Quick fixes or surface-level experiences</li>
-              <li>• Motivational or high-energy environments</li>
-              <li>• Leaders avoiding responsibility</li>
-              <li>• Group tourism disguised as growth</li>
-            </ul>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= OUTCOMES ================= */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 py-32">
-        <h2 className="text-4xl font-semibold mb-16">
-          What Leaders Experience After Retreats
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-
-          {[
-            "Decision-making clarity improves 2–3× within weeks",
-            "Stress and mental fatigue reduce by ~70%",
-            "Leadership presence becomes calm and authoritative",
-            "Teams align faster through clearer direction",
-            "Strategic priorities feel settled and coherent",
-            "Influence extends naturally across work and life",
-          ].map((item) => (
-            <div
-              key={item}
-              className="bg-white rounded-3xl p-8 shadow-md"
-            >
-              <p className="text-lg text-[#3F4F4B]">{item}</p>
-            </div>
-          ))}
-
-        </div>
-      </section>
-
-     {/* ================= TESTIMONIALS ================= */}
-      <section className="bg-[#F4F7F3] py-32 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-semibold mb-16 text-[#1F3D2B]">
-            What Leaders Say
+      <section className="bg-gradient-to-r from-[#F3E8E2] to-[#E8F3EF]">
+        <div className="max-w-7xl mx-auto px-6 md:px-16 py-28">
+          <h2 className="text-4xl font-semibold mb-12">
+            What Happens During an Innerverse Retreat
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-
             {[
               {
-                quote:
-                  "After working with Innerverse, I made decisions in minutes that previously took days. My team executed seamlessly.",
-                author: "CXO",
-                industry: "SaaS Unicorn",
+                title: "Mental Reset",
+                desc: "Space to decompress, slow thinking, and release decision fatigue."
               },
               {
-                quote:
-                  "The clarity I gained improved both my personal and professional life — meetings were shorter and I felt calm under pressure.",
-                author: "Founder",
-                industry: "Fintech Startup",
+                title: "Identity Reconnection",
+                desc: "Reconnect with who you are beneath roles, expectations, and performance."
               },
               {
-                quote:
-                  "Two weeks of recalibration gave me a lens to see priorities clearly. Decisions impacting ~$3M were made with precision.",
-                author: "Director",
-                industry: "Manufacturing",
+                title: "Strategic Realignment",
+                desc: "Clarify priorities across leadership, relationships, and personal life."
               },
-            ].map((item, idx) => (
+            ].map((item) => (
               <div
-                key={idx}
-                className="bg-white rounded-3xl p-8 shadow-md flex flex-col justify-between"
+                key={item.title}
+                className="bg-white rounded-3xl p-8 shadow-md"
               >
-                <p className="text-lg text-[#3F4F4B] leading-relaxed mb-6">
-                  “{item.quote}”
+                <h3 className="text-xl font-semibold mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-[#4A5A55]">
+                  {item.desc}
                 </p>
-                <div className="text-sm text-[#6B7F6A]">
-                  — {item.author}, {item.industry}
-                </div>
               </div>
             ))}
-
           </div>
         </div>
       </section>
 
+      {/* ================= ROI / OUTCOMES ================= */}
+      <section className="max-w-7xl mx-auto px-6 md:px-16 py-28">
+        <h2 className="text-4xl font-semibold mb-12">
+          What Leaders Experience After Retreats
+        </h2>
 
-      {/* ================= CTA ================= */}
-      <section className="text-center py-28 px-6 md:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {[
+            "Decision-making clarity improves 2–3×",
+            "Stress and mental fatigue reduce ~70%",
+            "Leadership presence becomes calm and authoritative",
+            "Teams align faster through clearer direction",
+            "Strategic priorities feel settled across work and life",
+            "Influence extends naturally across professional and personal spheres",
+          ].map((item) => (
+            <div
+              key={item}
+              className="bg-white rounded-3xl p-8 shadow-md border-l-4 border-[#E8C547]"
+            >
+              <p className="text-[#3F4F4B] text-lg">
+                {item}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= FINAL CTA ================= */}
+      <section className="text-center py-28 px-6 md:px-16 bg-[#F4F7F3]">
         <h2 className="text-4xl font-semibold mb-6">
           Apply for Retreat Access
         </h2>
 
         <p className="text-xl text-[#3F4F4B] max-w-3xl mx-auto mb-10">
-          This is not an event registration.
+          Not an event registration.
           A refundable deposit initiates a private conversation
           to assess alignment and readiness.
         </p>
