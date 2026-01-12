@@ -59,33 +59,38 @@ export default function AboutPage() {
           </h3>
 
           <ul className="space-y-3 text-[#4A5A55]">
-            <li>• Motivation or surface-level mindset work</li>
-            <li>• Productivity hacks or performance tricks</li>
-            <li>• Group programs or generic leadership advice</li>
-            <li>• Therapy, venting, or emotional dependency</li>
+            <li>• Motivation.</li>
+            <li>• Surface-level mindset work.</li>
+            <li>• Productivity hacks.</li>
+            <li>• Performance tricks.</li>
+            <li>• Group programs.</li>
+            <li>• Generic leadership advice.</li>
+            <li>• Therapy.</li>
+            <li>• Venting.</li> 
+            <li>• Emotional dependency.</li>
           </ul>
         </div>
       </section>
 
-      {/* ================= IMPACT METRICS ================= */}
-      <section className="max-w-7xl mx-auto px-6 md:px-16 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
-          {[
-            { value: "120+", label: "Leaders recalibrated" },
-            { value: "12+ hrs/week", label: "Mental bandwidth reclaimed" },
-            { value: "3× faster", label: "High-stakes decisions" },
-            { value: "48 hrs", label: "Team alignment post recalibration" },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="bg-white rounded-3xl p-8 shadow-md"
-            >
-              <p className="text-4xl font-semibold mb-2">{item.value}</p>
-              <p className="text-[#4A5A55]">{item.label}</p>
-            </div>
-          ))}
+      {/* ================= TRANSFORMATION VIGNETTE ================= */}
+      <section className="bg-[#F4F7F3] py-24 px-6 md:px-16">
+        <div className="max-w-5xl mx-auto bg-white rounded-3xl p-10 shadow-md">
+          <h3 className="text-2xl font-semibold mb-4">
+            Transformation Story
+          </h3>
+
+          <p className="text-[#3F4F4B] leading-relaxed mb-4">
+            <strong>Before:</strong> A CXO in a leading tech firm spent 6+ hours/week in indecision, reactive to emails, 
+            teams, and family demands.
+          </p>
+
+          <p className="text-[#3F4F4B] leading-relaxed">
+            <strong>After:</strong> Decisions on multi-million-rupee projects executed in under 30 minutes. 
+            Mental bandwidth restored for strategy, relationships, and priorities.
+          </p>
         </div>
       </section>
+
 
       {/* ================= FOUNDER ================= */}
       <section className="bg-gradient-to-r from-[#F3E8E2] to-[#E8F3EF]">

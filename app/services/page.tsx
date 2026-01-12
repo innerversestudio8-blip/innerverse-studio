@@ -151,19 +151,19 @@ export default function ServicesPage() {
           Investment
         </h2>
 
-        <p className="text-xl text-[#3F4F4B] leading-relaxed mb-6 text-justify">
+        <p className="text-lg text-[#3F4F4B] leading-relaxed mb-6 text-justify">
           A deliberate, high-trust engagement in the clarity, authority, and presence that accelerates your
           influence and impact.
         </p>
 
         <p className="text-lg text-[#4A5A55] mb-6">
-         This immersive program is designed to create <b>transformational depth, absolute discretion,
-         and sustained leadership advantage.</b>
+         This immersive program is designed to deliver <b>transformational depth, absolute discretion,
+         and sustained leadership advantage.</b> The duration is tailored to each client to maximize impact.
         </p>
 
         <p className="text-lg text-[#4A5A55] text-justify">
           The true value lies in the decisions you'll make, the alignment you'll gain, and the authoiryt you'll
-          command -- <b>a leverage point for you leadership, you team, and your legacy</b>
+          command -- <b>a strategic leverage point for your leadership, your team, and your legacy.</b>
         </p>
       </section>
 
@@ -183,7 +183,7 @@ export default function ServicesPage() {
           href="/contact"
           className="inline-block px-14 py-4 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
         >
-          Apply for a Private Conversation
+          Apply for a Private Conversation.
         </a>
 
         <p className="text-sm text-[#6B7F6A] mt-4">

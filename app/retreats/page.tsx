@@ -62,18 +62,17 @@ export default function RetreatsPage() {
       <section className="py-24 px-6 md:px-16">
         <div className="max-w-5xl mx-auto bg-white rounded-3xl p-10 shadow-md">
           <h3 className="text-2xl font-semibold mb-4">
-            Transformation Vignette
+            Transformation Story
           </h3>
 
           <p className="text-[#3F4F4B] leading-relaxed mb-4">
-            <strong>Before:</strong> Operational, strategic,
-            and personal pressures created constant mental fatigue.
+            <strong>Before:</strong> A senior operations leader in a Fortune 500 company faced constant mental fatigue from operational, 
+            strategic, and personal pressures.
           </p>
 
           <p className="text-[#3F4F4B] leading-relaxed">
-            <strong>After:</strong> Decision-making clarity improved 2–3×.
-            Stress reduced by ~70%. Presence became calm and authoritative —
-            at work, home, and social life.
+            <strong>After:</strong> Decision-making clarity improved 2–3×. Stress reduced ~70%. 
+            Presence became calm and authoritative — at work, home, and in social life.
           </p>
         </div>
       </section>
