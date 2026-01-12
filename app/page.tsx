@@ -36,7 +36,7 @@ export default function HomePage() {
           </a>
 
           <p className="text-sm text-[#6B7F6A] mt-3">
-            Confidential. Selective. By design.
+            &nbsp; &nbsp; Confidential. Selective. By design.
           </p>
         </div>
 

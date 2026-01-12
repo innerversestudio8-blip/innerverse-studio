@@ -32,18 +32,17 @@ export default function ServicesPage() {
       <section className="bg-[#F4F7F3] py-24 px-6 md:px-16">
         <div className="max-w-5xl mx-auto bg-white rounded-3xl p-10 shadow-md">
           <h3 className="text-2xl font-semibold mb-4">
-            Transformation Vignette
+            Transformation Story
           </h3>
 
           <p className="text-[#3F4F4B] leading-relaxed mb-4">
-            <strong>Before:</strong> Leader spent 6+ hours/week in indecision,
-            reactive to emails, teams, and family demands.
+            <strong>Before:</strong> A senior project leader in a global firm spend days on $3M+ decisions, with mental 
+            fatigue spilling into evenings and affecting fmaily and personal priorities.
           </p>
 
           <p className="text-[#3F4F4B] leading-relaxed">
-            <strong>After:</strong> Decisions impacting multi-million-rupee
-            projects executed in under 30 minutes. Mental bandwidth restored
-            for strategy, relationships, and personal priorities.
+            <strong>After:</strong> Decisions executed in minutes, Teams aligned naturally, Evenings clear and present with
+            mental bandwith restored for personal life.
           </p>
         </div>
       </section>
@@ -153,26 +152,25 @@ export default function ServicesPage() {
         </h2>
 
         <p className="text-xl text-[#3F4F4B] leading-relaxed mb-6 text-justify">
-          ₹5,00,000 — a strategic, high-trust investment in clarity,
-          authority, presence, and long-term impact.
+          A deliberate, high-trust engagement in the clarity, authority, and presence that accelerates your
+          influence and impact.
         </p>
 
         <p className="text-lg text-[#4A5A55] mb-6">
-          Only 6–8 leaders per quarter to ensure depth,
-          discretion, and exclusivity.
+         This immersive program is designed to create <b>transformational depth, absolute discretion,
+         and sustained leadership advantage.</b>
         </p>
 
         <p className="text-lg text-[#4A5A55] text-justify">
-          This investment is less than a fraction of the value
-          generated through faster decisions, stronger alignment,
-          and sustained leadership influence.
+          The true value lies in the decisions you'll make, the alignment you'll gain, and the authoiryt you'll
+          command -- <b>a leverage point for you leadership, you team, and your legacy</b>
         </p>
       </section>
 
       {/* ================= FINAL CTA ================= */}
       <section className="text-center py-28 px-6 md:px-16 bg-[#F4F7F3]">
         <h2 className="text-4xl font-semibold mb-6">
-          Apply for a Private Conversation
+          Apply now to explore if this experinece is right for you.
         </h2>
 
         <p className="text-xl text-[#3F4F4B] max-w-3xl mx-auto mb-10">
