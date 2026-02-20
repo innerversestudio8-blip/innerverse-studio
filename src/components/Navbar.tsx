@@ -26,12 +26,12 @@ export default function Navbar() {
           <Link href="/services" className="hover:text-white transition">
             Services
           </Link>
-          <Link href="/retreats" className="hover:text-white transition">
+          {/* <Link href="/retreats" className="hover:text-white transition">
             Retreats
           </Link>
           <Link href="/products" className="hover:text-white transition">
             Products
-          </Link>
+          </Link> */}
 
           <Link
             href="/contact"
