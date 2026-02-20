@@ -26,6 +26,9 @@ export default function Navbar() {
           <Link href="/services" className="hover:text-white transition">
             Services
           </Link>
+          <Link href="/decision-inflection-audit" className="hover:text-white transition">
+          Inflection Audit
+          </Link>
           {/* <Link href="/retreats" className="hover:text-white transition">
             Retreats
           </Link>
