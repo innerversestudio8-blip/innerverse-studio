@@ -1,32 +1,34 @@
 "use client";
 
+
+import React from "react";
 import { useState } from "react";
 import Link from "next/link";
 
+type Question = {
+  id: string;
+  text: string;
+};
+
 export default function DecisionInflectionAudit() {
-  const [answers, setAnswers] = useState<Record<string, boolean>>({});
+  const [answers, setAnswers] = useState<{ [key: string]: boolean }>({});
   const [submitted, setSubmitted] = useState(false);
 
-  const questions = [
-    // I. Decision Friction
+  const questions: Question[] = [
     { id: "q1", text: "There is a consequential decision I’ve been circling for more than 30 days." },
     { id: "q2", text: "I intellectually know the answer — but I haven’t acted." },
     { id: "q3", text: "The cost of postponement is increasing (financially, reputationally, strategically, or emotionally)." },
 
-    // II. Cognitive Load
     { id: "q4", text: "I experience decision fatigue more often than I publicly acknowledge." },
     { id: "q5", text: "I am carrying strategic pressure I cannot discuss openly." },
     { id: "q6", text: "My thinking feels crowded when I attempt to evaluate this decision." },
 
-    // III. Identity Alignment
     { id: "q7", text: "My current role or direction no longer fully reflects who I am becoming." },
     { id: "q8", text: "My non-negotiables for this next chapter are not clearly defined." },
 
-    // IV. Risk & Consequence
     { id: "q9", text: "This decision meaningfully affects capital, reputation, or people." },
     { id: "q10", text: "A misstep would have long-term second-order consequences." },
 
-    // V. Strategic Isolation
     { id: "q11", text: "I do not currently have a neutral, high-caliber thinking partner for this level of decision." },
   ];
 
@@ -35,6 +37,10 @@ export default function DecisionInflectionAudit() {
   };
 
   const handleSubmit = () => {
+    if (Object.keys(answers).length === 0) {
+      alert("Please answer at least one question");
+      return;
+    }
     setSubmitted(true);
   };
 
@@ -63,10 +69,11 @@ export default function DecisionInflectionAudit() {
         </p>
       </section>
 
-      {/* DIAGNOSTIC */}
+      {/* QUESTIONS */}
       {!submitted && (
         <section className="max-w-4xl mx-auto px-6 md:px-16 pb-32 space-y-8">
           <div className="bg-white rounded-3xl p-10 shadow-md space-y-10">
+
             <p className="text-lg text-[#4A5A55]">
               Answer honestly. No overthinking. Yes or No.
             </p>
@@ -113,6 +120,7 @@ export default function DecisionInflectionAudit() {
                 View My Assessment
               </button>
             </div>
+
           </div>
         </section>
       )}
@@ -127,12 +135,10 @@ export default function DecisionInflectionAudit() {
             </h2>
 
             {score <= 3 && (
-              <>
-                <p className="text-xl text-[#4A5A55]">
-                  You may not be at a major inflection point yet.
-                  Monitor — but no immediate intervention required.
-                </p>
-              </>
+              <p className="text-xl text-[#4A5A55]">
+                You may not be at a major inflection point yet.
+                Monitor — but no immediate intervention required.
+              </p>
             )}
 
             {score >= 4 && score <= 7 && (
@@ -143,8 +149,7 @@ export default function DecisionInflectionAudit() {
                 </p>
 
                 <p className="text-lg text-[#4A5A55]">
-                  Inflection points at this threshold benefit from calibrated thinking
-                  before the next strategic cycle compounds cost.
+                  Inflection points at this threshold benefit from calibrated thinking.
                 </p>
 
                 <Link
@@ -164,8 +169,7 @@ export default function DecisionInflectionAudit() {
                 </p>
 
                 <p className="text-lg text-[#4A5A55]">
-                  This decision is no longer tactical — it is architectural.
-                  Immediate recalibration is advised.
+                  This decision is architectural. Immediate recalibration advised.
                 </p>
 
                 <Link

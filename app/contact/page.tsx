@@ -1,6 +1,11 @@
 "use client";
 
+import React from "react";
+import { useSearchParams } from "next/navigation";
+
 export default function ContactPage() {
+  const searchParams = useSearchParams();
+  const source = searchParams.get("source");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -15,16 +20,17 @@ export default function ContactPage() {
       seeking: (form.elements.namedItem("seeking") as HTMLTextAreaElement).value,
       expectation: (form.elements.namedItem("expectation") as HTMLTextAreaElement).value,
       context: (form.elements.namedItem("context") as HTMLTextAreaElement).value,
+
+      // ✅ NEW FIELD
+      source: source || "direct",
     };
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbwcmCsOFIVmq6jbEq_s4iaYfjK6hOu9vhxrKC9IlQ6S2fVeKBbn0e19xHji0XrsTNP_/exec",
+        "https://script.google.com/macros/s/AKfycbw2pGcrdSfgs1VL83dup4q6YMmJ0FqsO2GfiTSRM7ZjV0neGzsHafr9038fcnlyARQLSg/exec",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          mode: "no-cors",
           body: JSON.stringify(formData),
         }
       );
@@ -57,6 +63,13 @@ export default function ContactPage() {
             Not everyone will be invited. Only applications that meet
             the criteria are considered.
           </p>
+
+          {/* ✅ CONDITIONAL MESSAGE */}
+          {source === "audit" && (
+            <p className="mt-6 text-sm text-[#8A3A2A] font-medium">
+              Applications from the Inner Architecture Index are prioritized.
+            </p>
+          )}
         </div>
       </section>
 
@@ -86,7 +99,6 @@ export default function ContactPage() {
           className="bg-white rounded-3xl p-10 shadow-md space-y-8"
         >
 
-          {/* BASIC INFO */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               name="name"
@@ -141,7 +153,7 @@ export default function ContactPage() {
             type="submit"
             className="px-14 py-4 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
           >
-            Submit Application
+            Request Strategic Architecture Review
           </button>
 
           <p className="text-sm text-[#6B7F6A] mt-4 max-w-3xl">
