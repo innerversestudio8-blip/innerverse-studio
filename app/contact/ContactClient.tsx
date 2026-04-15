@@ -30,15 +30,15 @@ export default function ContactClient() {
     };
 
     try {
-      await fetch("YOUR_SCRIPT_URL", {
+      console.log("Submitting:", formData);
+
+      await fetch("https://script.google.com/macros/s/AKfycbw2pGcrdSfgs1VL83dup4q6YMmJ0FqsO2GfiTSRM7ZjV0neGzsHafr9038fcnlyARQLSg/exec", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        mode: "no-cors", // ✅ CORS FIX
+        body: new URLSearchParams(formData as any),
       });
 
-      alert("Submitted successfully");
+      alert("Your application has been submitted successfully.");
       form.reset();
     } catch {
       alert("Something went wrong. Please try again.");
@@ -46,24 +46,105 @@ export default function ContactClient() {
   }
 
   return (
-    <main style={{ padding: 40 }}>
-      <h1>Contact</h1>
+    <main className="w-full bg-[#F9FAF9] text-[#1F3D2B]">
 
-      <form onSubmit={handleSubmit}>
-        <input name="name" placeholder="Name" required /><br /><br />
-        <input name="email" placeholder="Email" required /><br /><br />
-        <input name="role" placeholder="Role" /><br /><br />
-        <input name="timeline" placeholder="Timeline" /><br /><br />
+      {/* HERO */}
+      <section className="max-w-7xl mx-auto px-6 md:px-16 pt-28 pb-20">
+        <div className="max-w-4xl">
+          <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-6">
+            Apply for a Private  
+            <br />Clarity Conversation
+          </h1>
 
-        <textarea name="seeking" placeholder="Seeking" /><br /><br />
-        <textarea name="expectation" placeholder="Expectation" /><br /><br />
-        <textarea name="context" placeholder="Context" /><br /><br />
+          <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
+            Selective. Confidential. Transformational.
+          </p>
 
-        <button type="submit">Submit</button>
-      </form>
+          <p className="text-lg text-[#4A5A55] leading-relaxed text-justify">
+            This conversation is reserved for leaders ready to see themselves,
+            their work, and their life with unprecedented clarity.
+          </p>
 
-      <p>Decision Score: {decisionScore}</p>
-      <p>Inner Score: {innerScore}</p>
+          {/* PRIORITY MESSAGE */}
+          {source === "audit" && (
+            <p className="mt-6 text-sm text-[#8A3A2A] font-medium">
+              Your diagnostic results have been recorded. Applications from this path are prioritized.
+            </p>
+          )}
+        </div>
+      </section>
+
+      {/* FORM */}
+      <section className="max-w-5xl mx-auto px-6 md:px-16 pb-32">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white rounded-3xl p-10 shadow-md space-y-8"
+        >
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input
+              name="name"
+              required
+              placeholder="Full Name"
+              className="w-full rounded-xl border px-4 py-3"
+            />
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Email Address"
+              className="w-full rounded-xl border px-4 py-3"
+            />
+          </div>
+
+          <input
+            name="role"
+            placeholder="Current Role / Responsibility"
+            className="w-full rounded-xl border px-4 py-3"
+          />
+
+          <input
+            name="timeline"
+            placeholder="When would you like to begin?"
+            className="w-full rounded-xl border px-4 py-3"
+          />
+
+          <textarea
+            name="seeking"
+            rows={4}
+            placeholder="What are you seeking clarity on?"
+            className="w-full rounded-xl border px-4 py-3"
+          />
+
+          <textarea
+            name="expectation"
+            rows={4}
+            placeholder="What would make this conversation transformative?"
+            className="w-full rounded-xl border px-4 py-3"
+          />
+
+          <textarea
+            name="context"
+            rows={3}
+            placeholder="Any additional context you'd like to share?"
+            className="w-full rounded-xl border px-4 py-3"
+          />
+
+          <button
+            type="submit"
+            className="px-14 py-4 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
+          >
+            Request Strategic Architecture Review
+          </button>
+
+          <p className="text-sm text-[#6B7F6A] mt-4 max-w-3xl">
+            Your information is kept private and reviewed personally.
+            Only a limited number of conversations are offered each quarter.
+          </p>
+
+        </form>
+      </section>
+
     </main>
   );
 }
