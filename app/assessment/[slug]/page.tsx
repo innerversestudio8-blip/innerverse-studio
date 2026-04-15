@@ -1,17 +1,21 @@
 import AssessmentEngine from "@/assessments/engine/AssessmentEngine";
 import { decisionInflection } from "@/assessments/configs/decisionInflection";
+import { innerArchitecture } from "@/assessments/configs/innerArchitecture"; // ✅ NEW
 
 const registry: any = {
   "decision-inflection": decisionInflection,
+  "inner-architecture": innerArchitecture, // ✅ NEW
 };
 
-export default function Page({ params }: any) {
-  const config = registry[params.slug];
+export default async function Page({ params }: any) {
+  const resolvedParams = await params;
+
+  const config = registry[resolvedParams.slug];
 
   if (!config) {
     return (
       <div style={{ padding: "40px" }}>
-        Assessment not found: {params.slug}
+        ❌ Assessment not found: {resolvedParams.slug}
       </div>
     );
   }

@@ -1,189 +1,71 @@
 "use client";
 
-
-import React from "react";
-import { useState } from "react";
 import Link from "next/link";
 
-type Question = {
-  id: string;
-  text: string;
-};
-
-export default function DecisionInflectionAudit() {
-  const [answers, setAnswers] = useState<{ [key: string]: boolean }>({});
-  const [submitted, setSubmitted] = useState(false);
-
-  const questions: Question[] = [
-    { id: "q1", text: "There is a consequential decision I’ve been circling for more than 30 days." },
-    { id: "q2", text: "I intellectually know the answer — but I haven’t acted." },
-    { id: "q3", text: "The cost of postponement is increasing (financially, reputationally, strategically, or emotionally)." },
-
-    { id: "q4", text: "I experience decision fatigue more often than I publicly acknowledge." },
-    { id: "q5", text: "I am carrying strategic pressure I cannot discuss openly." },
-    { id: "q6", text: "My thinking feels crowded when I attempt to evaluate this decision." },
-
-    { id: "q7", text: "My current role or direction no longer fully reflects who I am becoming." },
-    { id: "q8", text: "My non-negotiables for this next chapter are not clearly defined." },
-
-    { id: "q9", text: "This decision meaningfully affects capital, reputation, or people." },
-    { id: "q10", text: "A misstep would have long-term second-order consequences." },
-
-    { id: "q11", text: "I do not currently have a neutral, high-caliber thinking partner for this level of decision." },
-  ];
-
-  const handleChange = (id: string, value: boolean) => {
-    setAnswers((prev) => ({ ...prev, [id]: value }));
-  };
-
-  const handleSubmit = () => {
-    if (Object.keys(answers).length === 0) {
-      alert("Please answer at least one question");
-      return;
-    }
-    setSubmitted(true);
-  };
-
-  const score = Object.values(answers).filter(Boolean).length;
-
+export default function AssessmentHub() {
   return (
     <main className="w-full bg-[#F9FAF9] text-[#1F3D2B]">
 
       {/* HERO */}
-      <section className="max-w-5xl mx-auto px-6 md:px-16 pt-28 pb-20">
+      <section className="max-w-5xl mx-auto px-6 md:px-16 pt-28 pb-20 text-center">
+        
         <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-8">
-          Are You Sitting on a Decision That Quietly Determines Your Next 3 Years?
+          Inner Architecture Diagnostics
         </h1>
 
-        <p className="text-xl text-[#3F4F4B] leading-relaxed mb-6 text-justify">
-          Most strategic errors are not wrong decisions. They are delayed decisions.
+        <p className="text-xl text-[#3F4F4B] leading-relaxed mb-6">
+          Choose the calibration that reflects your current challenge.
         </p>
 
-        <p className="text-lg text-[#4A5A55] leading-relaxed text-justify">
-          This 5-minute audit is designed for high-responsibility leaders navigating
-          a consequential inflection point — where delay compounds cost, and clarity compounds leverage.
+        <p className="text-lg text-[#4A5A55] max-w-3xl mx-auto">
+          Each diagnostic is designed to identify structural gaps in how you think,
+          decide, and operate at scale.
         </p>
 
-        <p className="text-lg text-[#4A5A55] mt-6">
-          It is not about productivity. It is about trajectory.
-        </p>
       </section>
 
-      {/* QUESTIONS */}
-      {!submitted && (
-        <section className="max-w-4xl mx-auto px-6 md:px-16 pb-32 space-y-8">
-          <div className="bg-white rounded-3xl p-10 shadow-md space-y-10">
+      {/* OPTIONS */}
+      <section className="max-w-5xl mx-auto px-6 md:px-16 pb-32 grid md:grid-cols-2 gap-8">
 
-            <p className="text-lg text-[#4A5A55]">
-              Answer honestly. No overthinking. Yes or No.
-            </p>
+        {/* DECISION INFLECTION */}
+        <div className="bg-white rounded-3xl p-10 shadow-md space-y-6">
+          <h2 className="text-2xl font-semibold">
+            Decision Inflection Audit
+          </h2>
 
-            {questions.map((q, index) => (
-              <div key={q.id} className="space-y-4">
-                <p className="text-lg text-[#3F4F4B]">
-                  {index + 1}. {q.text}
-                </p>
+          <p className="text-[#4A5A55]">
+            Identify whether you are sitting on a high-stakes decision
+            that is quietly shaping your next phase.
+          </p>
 
-                <div className="flex gap-6">
-                  <button
-                    type="button"
-                    onClick={() => handleChange(q.id, true)}
-                    className={`px-6 py-2 rounded-full border ${
-                      answers[q.id] === true
-                        ? "bg-[#1F3D2B] text-white"
-                        : "border-[#1F3D2B]"
-                    }`}
-                  >
-                    Yes
-                  </button>
+          <Link
+            href="/assessment/decision-inflection"
+            className="inline-block mt-4 px-8 py-3 rounded-full bg-[#1F3D2B] text-white hover:scale-105 transition"
+          >
+            Start Decision Audit
+          </Link>
+        </div>
 
-                  <button
-                    type="button"
-                    onClick={() => handleChange(q.id, false)}
-                    className={`px-6 py-2 rounded-full border ${
-                      answers[q.id] === false
-                        ? "bg-[#1F3D2B] text-white"
-                        : "border-[#1F3D2B]"
-                    }`}
-                  >
-                    No
-                  </button>
-                </div>
-              </div>
-            ))}
+        {/* INNER ARCHITECTURE */}
+        <div className="bg-white rounded-3xl p-10 shadow-md space-y-6">
+          <h2 className="text-2xl font-semibold">
+            Inner Architecture Index™
+          </h2>
 
-            <div className="text-center pt-8">
-              <button
-                onClick={handleSubmit}
-                className="px-14 py-4 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
-              >
-                View My Assessment
-              </button>
-            </div>
+          <p className="text-[#4A5A55]">
+            Measure how your internal operating structure supports
+            your current level of leadership and scale.
+          </p>
 
-          </div>
-        </section>
-      )}
+          <Link
+            href="/assessment/inner-architecture"
+            className="inline-block mt-4 px-8 py-3 rounded-full bg-[#1F3D2B] text-white hover:scale-105 transition"
+          >
+            Start Architecture Assessment
+          </Link>
+        </div>
 
-      {/* RESULTS */}
-      {submitted && (
-        <section className="max-w-4xl mx-auto px-6 md:px-16 pb-32">
-          <div className="bg-white rounded-3xl p-12 shadow-md text-center space-y-8">
-
-            <h2 className="text-4xl font-semibold">
-              Your Assessment Result
-            </h2>
-
-            {score <= 3 && (
-              <p className="text-xl text-[#4A5A55]">
-                You may not be at a major inflection point yet.
-                Monitor — but no immediate intervention required.
-              </p>
-            )}
-
-            {score >= 4 && score <= 7 && (
-              <>
-                <p className="text-xl text-[#4A5A55]">
-                  You are likely experiencing decision distortion.
-                  Clarity is present — alignment is fragmented.
-                </p>
-
-                <p className="text-lg text-[#4A5A55]">
-                  Inflection points at this threshold benefit from calibrated thinking.
-                </p>
-
-                <Link
-                  href="/contact?source=audit"
-                  className="inline-block mt-6 px-14 py-4 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
-                >
-                  Book a Private Decision Session
-                </Link>
-              </>
-            )}
-
-            {score >= 8 && (
-              <>
-                <p className="text-xl text-[#4A5A55]">
-                  You are operating at a strategic inflection point.
-                  Delay is compounding cost.
-                </p>
-
-                <p className="text-lg text-[#4A5A55]">
-                  This decision is architectural. Immediate recalibration advised.
-                </p>
-
-                <Link
-                  href="/contact?source=audit"
-                  className="inline-block mt-6 px-14 py-4 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
-                >
-                  Book a Confidential Decision Session
-                </Link>
-              </>
-            )}
-
-          </div>
-        </section>
-      )}
+      </section>
 
     </main>
   );
