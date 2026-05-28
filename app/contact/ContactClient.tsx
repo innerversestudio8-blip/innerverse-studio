@@ -4,13 +4,17 @@ import React from "react";
 import { useSearchParams } from "next/navigation";
 
 export default function ContactClient() {
+
   const searchParams = useSearchParams();
 
   const source = searchParams.get("source");
   const decisionScore = searchParams.get("decisionScore");
   const innerScore = searchParams.get("innerScore");
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(
+    e: React.FormEvent<HTMLFormElement>
+  ) {
+
     e.preventDefault();
 
     const form = e.currentTarget;
@@ -30,17 +34,30 @@ export default function ContactClient() {
     };
 
     try {
-      console.log("Submitting:", formData);
 
-      await fetch("https://script.google.com/macros/s/AKfycbw2pGcrdSfgs1VL83dup4q6YMmJ0FqsO2GfiTSRM7ZjV0neGzsHafr9038fcnlyARQLSg/exec", {
-        method: "POST",
-        mode: "no-cors", // ✅ CORS FIX
-        body: new URLSearchParams(formData as any),
+      const data = new FormData();
+
+      Object.entries(formData).forEach(([key, value]) => {
+        data.append(key, value);
       });
 
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxu78X1_0samX7k00KgFak1PNIGNKmX2RyDxC99xiuQ_UhCG9AoRIP2EiV9CljaPN1mzA/exec",
+        {
+          method: "POST",
+          
+          body: data,
+        }
+      );
+
       alert("Your application has been submitted successfully.");
+
       form.reset();
-    } catch {
+
+    } catch (error) {
+
+      console.error(error);
+
       alert("Something went wrong. Please try again.");
     }
   }
@@ -50,10 +67,13 @@ export default function ContactClient() {
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 md:px-16 pt-28 pb-20">
+
         <div className="max-w-4xl">
+
           <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-6">
-            Apply for a Private  
-            <br />Clarity Conversation
+            Apply for a Private
+            <br />
+            Clarity Conversation
           </h1>
 
           <p className="text-xl text-[#3F4F4B] leading-relaxed mb-8 text-justify">
@@ -65,29 +85,34 @@ export default function ContactClient() {
             their work, and their life with unprecedented clarity.
           </p>
 
-          {/* PRIORITY MESSAGE */}
           {source === "audit" && (
             <p className="mt-6 text-sm text-[#8A3A2A] font-medium">
-              Your diagnostic results have been recorded. Applications from this path are prioritized.
+              Your diagnostic results have been recorded.
+              Applications from this path are prioritized.
             </p>
           )}
+
         </div>
+
       </section>
 
       {/* FORM */}
       <section className="max-w-5xl mx-auto px-6 md:px-16 pb-32">
+
         <form
           onSubmit={handleSubmit}
           className="bg-white rounded-3xl p-10 shadow-md space-y-8"
         >
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
             <input
               name="name"
               required
               placeholder="Full Name"
               className="w-full rounded-xl border px-4 py-3"
             />
+
             <input
               name="email"
               type="email"
@@ -95,6 +120,7 @@ export default function ContactClient() {
               placeholder="Email Address"
               className="w-full rounded-xl border px-4 py-3"
             />
+
           </div>
 
           <input
@@ -137,12 +163,8 @@ export default function ContactClient() {
             Request Strategic Architecture Review
           </button>
 
-          <p className="text-sm text-[#6B7F6A] mt-4 max-w-3xl">
-            Your information is kept private and reviewed personally.
-            Only a limited number of conversations are offered each quarter.
-          </p>
-
         </form>
+
       </section>
 
     </main>
