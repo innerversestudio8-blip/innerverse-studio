@@ -39,7 +39,7 @@ export default function HomePage() {
               decisions with discretion and depth. 
             </p>  */}
             {/* Founder */} 
-            <a href="https://www.linkedin.com/in/pritamsawant/" 
+            <a href="/about" 
               target="_blank" rel="noopener noreferrer"  
               className="flex items-center gap-3 mt-6 pt-5 border-t border-[#E5ECE7] hover:opacity-80 transition w-fit" > 
               <img src="/illustrations/founder2.jpeg" 
@@ -51,7 +51,7 @@ export default function HomePage() {
                   <p className="text-xs text-[#6B7F6A]"> 
                     Founder, Innerverse Studio </p> 
                     <p className="text-xs text-[#94A39A] mt-1"> 
-                      View LinkedIn Profile → </p> 
+                      View About Founder → </p> 
                 </div> 
             </a>
             </div> 
