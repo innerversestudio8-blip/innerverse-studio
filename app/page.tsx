@@ -4,7 +4,7 @@ export default function HomePage() {
     <main className="w-full bg-[#F9FAF9] text-[#1F3D2B] overflow-hidden">
 
       
-      {/* ================= HERO ================= */}
+      
       {/* ================= HERO ================= */} 
       <section className="max-w-6xl mx-auto px-6 md:px-10 pt-14 pb-10"> 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.9fr] gap-10 items-center"> 
@@ -26,19 +26,34 @@ export default function HomePage() {
               calm execution, and aligned leadership. </p> 
               {/* CTA */} 
             <div className="flex flex-col sm:flex-row gap-4 mb-5"> 
-              <a href="/assessment/decision-inflection" 
+              {/* <a href="/assessment/decision-inflection" 
                 className="inline-block px-8 py-3 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition text-center" > 
                 Begin Diagnostic
-              </a> 
-              <a href="/contact" 
+              </a>  */}
+              {/* <a href="/contact" 
                 className="inline-block px-8 py-3 rounded-full border border-[#1F3D2B] text-[#1F3D2B] hover:bg-[#1F3D2B] hover:text-white transition text-center" > 
-                Private Conversation </a> 
+                Private Conversation </a>  */}
             </div> 
-            <p className="text-sm text-[#6B7F6A]"> 
+            {/* <p className="text-sm text-[#6B7F6A]"> 
               Designed for leaders navigating high-responsibility 
               decisions with discretion and depth. 
-            </p> 
-            {/* Founder */} <a href="https://www.linkedin.com/in/pritamsawant/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 mt-6 pt-5 border-t border-[#E5ECE7] hover:opacity-80 transition w-fit" > <img src="/illustrations/founder2.jpeg" alt="Pritam Sawant" className="w-12 h-12 rounded-full object-cover" /> <div> <p className="font-medium text-sm"> Pritam Sawant </p> <p className="text-xs text-[#6B7F6A]"> Founder, Innerverse Studio </p> <p className="text-xs text-[#94A39A] mt-1"> View LinkedIn Profile → </p> </div> </a>
+            </p>  */}
+            {/* Founder */} 
+            <a href="https://www.linkedin.com/in/pritamsawant/" 
+              target="_blank" rel="noopener noreferrer"  
+              className="flex items-center gap-3 mt-6 pt-5 border-t border-[#E5ECE7] hover:opacity-80 transition w-fit" > 
+              <img src="/illustrations/founder2.jpeg" 
+              alt="Pritam Sawant" 
+              className="w-12 h-12 rounded-full object-cover" /> 
+              <div> 
+                <p className="font-medium text-sm"> 
+                  Pritam Sawant </p> 
+                  <p className="text-xs text-[#6B7F6A]"> 
+                    Founder, Innerverse Studio </p> 
+                    <p className="text-xs text-[#94A39A] mt-1"> 
+                      View LinkedIn Profile → </p> 
+                </div> 
+            </a>
             </div> 
             {/* RIGHT IMAGE */} 
             <div className="flex justify-center lg:justify-end"> 
