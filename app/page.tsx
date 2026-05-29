@@ -57,7 +57,7 @@ export default function HomePage() {
             </div> 
             {/* RIGHT IMAGE */} 
             <div className="flex justify-center lg:justify-end"> 
-              <img src="/illustrations/hero.jpg" 
+              <img src="/illustrations/Hero.jpg" 
               alt="Strategic clarity" 
               className="w-full max-w-md h-[360px] object-cover rounded-3xl shadow-2xl" /> 
               </div> 
