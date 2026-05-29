@@ -16,9 +16,9 @@ export default function HomePage() {
                 Strategic Clarity for Leaders Operating 
                 Under Sustained Pressure </h1> 
             <p className="text-lg text-[#3F4F4B] leading-relaxed mb-5"> 
-              Even when everything appears under control, 
-              the weight of decisions never fully leaves your mind. 
-              Clarity slips quietly while expectations continue to rise. </p>
+              Even when everything appears under control,
+              the weight of responsibility never fully leaves your mind.
+              Clarity slips quietly as expectations continue to rise.</p>
             <p className="text-lg text-[#3F4F4B] leading-relaxed mb-7"> 
               Innerverse Studio helps founders, executives, 
               and high-responsibility professionals recalibrate 
@@ -90,7 +90,7 @@ export default function HomePage() {
 
           <p className="text-lg md:text-xl text-[#3F4F4B] leading-relaxed text-justify">
             Most leaders do not lack intelligence.
-            They lack structural clarity under pressure.
+            They lack clarity under sustained pressure.
 
             These assessments identify where friction,
             overload, delayed decisions, and internal misalignment
@@ -115,14 +115,14 @@ export default function HomePage() {
             <p className="text-[#4A5A55] leading-relaxed mb-8">
               Identify where delayed decisions are quietly
               compounding emotional, operational,
-              and strategic cost.
+              and strategic costs.
             </p>
 
             <a
               href="/assessment/decision-inflection"
               className="inline-block px-8 py-3 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
             >
-              Begin Assessment
+              Start Assessment
             </a>
 
           </div>
@@ -172,7 +172,7 @@ export default function HomePage() {
           </h2>
 
           <p className="text-lg md:text-xl text-[#3F4F4B] leading-relaxed mb-6 text-justify">
-            Innerverse is not about motivation,
+            Innerverse Studio is not about motivation,
             productivity hacks, or surface-level mindset work.
           </p>
 
@@ -315,7 +315,7 @@ export default function HomePage() {
             href="/services"
             className="inline-block px-12 py-4 rounded-full bg-white text-[#1F3D2B] shadow-lg hover:scale-105 transition"
           >
-            Explore 1:1 Recalibration
+            Explore Advisory
           </a>
 
         </div>
@@ -336,7 +336,7 @@ export default function HomePage() {
             {[
               {
                 quote:
-                  "After working with Innerverse, I made decisions in minutes that previously took days.",
+                  "After working with Innerverse, decisions that once took days became clear within minutes.",
                 author: "Senior Operations Executive",
                 industry: "Bangalore SaaS Company",
               },
@@ -391,7 +391,7 @@ export default function HomePage() {
           href="/contact"
           className="inline-block px-12 py-4 rounded-full border border-[#1F3D2B] text-[#1F3D2B] hover:bg-[#1F3D2B] hover:text-white transition"
         >
-          Private Conversation
+          Apply for a Private Conversation
         </a>
 
       </section>

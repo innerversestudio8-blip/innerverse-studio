@@ -36,13 +36,13 @@ export default function ServicesPage() {
           </h3>
 
           <p className="text-[#3F4F4B] leading-relaxed mb-4">
-            <strong>Before:</strong> A senior project leader in a global firm spend days on $3M+ decisions, with mental 
-            fatigue spilling into evenings and affecting fmaily and personal priorities.
+            <strong>Before:</strong>  A senior project leader in a global firm spent days deliberating over $3M+ decisions, 
+            with mental fatigue spilling into evenings and affecting family life and personal priorities.
           </p>
 
           <p className="text-[#3F4F4B] leading-relaxed">
-            <strong>After:</strong> Decisions executed in minutes, Teams aligned naturally, Evenings clear and present with
-            mental bandwith restored for personal life.
+            <strong>After:</strong> Decisions were executed in minutes. Teams aligned naturally. Evenings became calmer and more present, 
+            with mental bandwidth restored for personal life.
           </p>
         </div>
       </section>
@@ -162,15 +162,15 @@ export default function ServicesPage() {
         </p>
 
         <p className="text-lg text-[#4A5A55] text-justify">
-          The true value lies in the decisions you'll make, the alignment you'll gain, and the authoiryt you'll
-          command -- <b>a strategic leverage point for your leadership, your team, and your legacy.</b>
+          The true value lies in the decisions you'll make, the alignment you'll gain, and the authority you'll
+          command — <b>a strategic leverage point for your leadership, your team, and your legacy.</b>
         </p>
       </section>
 
       {/* ================= FINAL CTA ================= */}
       <section className="text-center py-28 px-6 md:px-16 bg-[#F4F7F3]">
         <h2 className="text-4xl font-semibold mb-6">
-          Apply now to explore if this experinece is right for you.
+          Explore Whether This Engagement Is Right for You.
         </h2>
 
         <p className="text-xl text-[#3F4F4B] max-w-3xl mx-auto mb-10">
@@ -183,7 +183,7 @@ export default function ServicesPage() {
           href="/contact"
           className="inline-block px-14 py-4 rounded-full bg-[#1F3D2B] text-white shadow-lg hover:scale-105 transition"
         >
-          Apply for a Private Conversation.
+          Apply for a Private Conversation
         </a>
 
         <p className="text-sm text-[#6B7F6A] mt-4">
